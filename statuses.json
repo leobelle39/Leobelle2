@@ -1,0 +1,70 @@
+{
+  "Isabelle": {
+    "izHwk": {
+      "value": "😩",
+      "timestamp": "4/9/2025, 11:37:14 PM"
+    },
+    "goobie": {
+      "value": "🧶",
+      "timestamp": "4/9/2025, 10:05:53 PM"
+    },
+    "leoHappy": {
+      "value": "🤷",
+      "timestamp": "4/9/2025, 11:11:05 PM"
+    },
+    "izHappy": {
+      "value": "☺️",
+      "timestamp": "4/10/2025, 8:10:20 AM"
+    },
+    "leoCar": {
+      "value": "❌",
+      "timestamp": "4/10/2025, 8:32:06 AM"
+    },
+    "izFreedom": {
+      "value": "50% day is mine",
+      "timestamp": "4/9/2025, 11:39:29 PM"
+    },
+    "izHeart": {
+      "value": "Open",
+      "timestamp": "4/9/2025, 11:39:46 PM"
+    },
+    "izPerf": {
+      "value": "Fail",
+      "timestamp": "4/9/2025, 11:39:37 PM"
+    },
+    "leoPerf": {
+      "value": "Acceptable",
+      "timestamp": "4/10/2025, 8:32:29 AM"
+    }
+  },
+  "Leo": {
+    "izHwk": {
+      "value": "😩",
+      "timestamp": "4/9/2025, 10:12:53 PM"
+    },
+    "leoPerf": {
+      "value": "Pass",
+      "timestamp": "4/9/2025, 10:18:08 PM"
+    },
+    "izPerf": {
+      "value": "Pass",
+      "timestamp": "4/9/2025, 10:18:14 PM"
+    },
+    "leoCar": {
+      "value": "✅",
+      "timestamp": "4/9/2025, 11:10:54 PM"
+    },
+    "goobie": {
+      "value": "🛡️",
+      "timestamp": "4/9/2025, 11:30:52 PM"
+    },
+    "izHeart": {
+      "value": "Vulnerable",
+      "timestamp": "4/10/2025, 8:33:02 AM"
+    },
+    "leoHeart": {
+      "value": "Vulnerable",
+      "timestamp": "4/10/2025, 10:29:17 AM"
+    }
+  }
+}

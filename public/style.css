@@ -1,0 +1,634 @@
+body {
+  font-family: 'Quicksand', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #fefefe;
+  color: #333;
+}
+
+header {
+  background: #8c9eff;
+  color: white;
+  padding: 1.5em;
+  text-align: center;
+}
+
+h1 {
+  margin: 0;
+  font-size: 2em;
+}
+
+main {
+  padding: 1em;
+}
+
+section {
+  margin-bottom: 2em;
+  padding: 1em;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  background: #f9f9f9;
+}
+
+/* Superhero selector */
+#superhero-select {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 12px;
+  margin-bottom: 1.5em;
+}
+
+#superhero-select .button-pair {
+  display: flex;
+  gap: 8px;
+}
+
+#superhero-select button {
+  padding: 0.4em 1em;
+  border: none;
+  border-radius: 6px;
+  font-size: 1em;
+  font-weight: bold;
+  color: white;
+  background-color: #888;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+#superhero-select button.selected {
+  background-color: #555;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Light themes */
+body.leo-theme {
+  background-color: #e3fce3 !important;
+}
+
+body.isabelle-theme {
+  background-color: #ffe2f2 !important;
+}
+
+/* Fast Status Rows */
+.status-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 1em;
+}
+
+.status-tile {
+  flex: 1 1 calc(50% - 10px);
+  box-sizing: border-box;
+  padding: 0.8em;
+  border-radius: 10px;
+  background-color: #e0e7ff;
+  text-align: center;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.05);
+}
+
+.status-tile select {
+  width: 100%;
+  font-size: 1em;
+  padding: 0.4em;
+  margin-top: 0.5em;
+  border-radius: 6px;
+  border: 1px solid #999;
+}
+
+.timestamp {
+  font-size: 0.8em;
+  color: #666;
+  margin-top: 0.3em;
+}
+
+.section-label {
+  margin: 0.3em 0 0.5em;
+  font-weight: 600;
+  font-size: 1em;
+}
+
+/* Mood Tracker */
+#mood-select,
+.action-btn {
+  font-size: 1.1em;
+  padding: 10px 14px;
+  border-radius: 8px;
+  font-weight: 600;
+}
+
+.response-note {
+  margin: 0.5em 0;
+  font-style: italic;
+  font-size: 0.9em;
+  color: #444;
+}
+
+.mood-box button {
+  font-size: 1em;
+  padding: 6px 12px;
+  margin-left: 5px;
+  border: none;
+  border-radius: 6px;
+  background-color: #e0e0ff;
+  color: #333;
+  cursor: pointer;
+}
+
+.mood-box button:hover {
+  background-color: #d0d0ff;
+}
+
+/* Chat */
+#chat-feed {
+  max-height: 300px;
+  overflow-y: auto;
+  background-color: #ffffff;
+  padding: 0.7em;
+  border-radius: 6px;
+  border: 1px solid #dddddd;
+  margin-bottom: 1em;
+}
+
+.chat-entry {
+  border-bottom: 1px solid #eeeeee;
+  margin-bottom: 0.7em;
+  padding-bottom: 0.5em;
+}
+
+.chat-meta {
+  margin-bottom: 4px;
+}
+
+.chat-name {
+  font-size: 1.1em;
+  font-weight: bold;
+  display: inline-block;
+}
+
+.chat-name.leo {
+  color: #0074D9;
+}
+
+.chat-name.isabelle {
+  color: #FF69B4;
+}
+
+.chat-time {
+  font-size: 0.75em;
+  color: #555555;
+  margin-left: 6px;
+}
+
+.chat-text {
+  font-size: 1em;
+  margin-bottom: 0.4em;
+}
+
+.chat-duck-gif {
+  width: 80px;
+  margin-top: 6px;
+  border-radius: 8px;
+}
+
+.chat-controls {
+  margin-top: 5px;
+  display: flex;
+  gap: 6px;
+}
+
+.chat-controls .mini-btn {
+  font-size: 0.75em;
+  padding: 3px 7px;
+  background-color: #eee;
+  border: 1px solid #aaa;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Chat input */
+#chat-input {
+  width: 100%;
+  padding: 0.6em;
+  font-size: 1em;
+  margin-bottom: 0.5em;
+  border: 1px solid #aaa;
+  border-radius: 6px;
+  box-sizing: border-box;
+}
+
+#chat-send {
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  border: none;
+  border-radius: 6px;
+  background-color: #8c9eff;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+#chat-send:hover {
+  background-color: #6c7fff;
+}
+
+.chat-image-preview {
+  max-width: 90%;
+  margin-top: 10px;
+  border-radius: 10px;
+}
+
+/* Synergy Bar */
+#synergy-section {
+  margin: 1em 0;
+  padding: 1em;
+  background-color: #f3f4ff;
+  border-radius: 10px;
+  text-align: center;
+}
+
+#synergy-bar-bg {
+  width: 100%;
+  height: 20px;
+  background-color: #ccc;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-top: 10px;
+}
+
+#synergy-bar-fill {
+  height: 100%;
+  width: 0%;
+  background-color: #8c9eff;
+  transition: width 0.3s ease;
+}
+
+.section-note {
+  font-size: 0.9em;
+  color: #666;
+  margin-top: -8px;
+  margin-bottom: 12px;
+  text-align: center;
+}
+
+/* Responsive layout */
+@media screen and (max-width: 600px) {
+  .status-row {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .status-tile {
+    flex: 1 1 calc(50% - 10px);
+  }
+}
+
+#journal {
+  background-color: #fdfdfd;
+  padding: 0.5em 1em 0.5em 1em; /* Top, right, bottom, left */
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8em;
+  margin-bottom: 0.8em; /* Optional: reduce if still too tall */
+}
+
+#journal textarea {
+  width: 100%;
+  height: 70px;
+  max-height: 120px;
+  font-size: 1em;
+  padding: 0.6em;
+  margin-top: 0.5em;
+  border-radius: 6px;
+  border: 1px solid #aaa;
+  box-sizing: border-box;
+  resize: vertical;
+  scroll-margin-bottom: 200px;
+}
+
+#journal-send {
+  margin-top: 0.5em;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  border: none;
+  border-radius: 6px;
+  background-color: #8c9eff;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+#journal-send:hover {
+  background-color: #6c7fff;
+}
+
+#journal-feed {
+  max-height: 25vh;
+  overflow-y: auto;
+  padding-right: 10px;
+  margin-bottom: 1em;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  scroll-behavior: smooth;
+  padding-bottom: 1em;
+}
+
+.journal-entry {
+  border-bottom: 1px solid #eee;
+  padding-bottom: 0.8em;
+  margin-bottom: 0.8em;
+  position: relative;
+}
+
+.journal-meta {
+  font-size: 0.8em;
+  color: #888;
+  margin-bottom: 0.3em;
+  font-weight: bold;
+}
+
+.journal-text {
+  font-size: 1em;
+  margin-top: 0.4em;
+  white-space: pre-wrap;
+}
+.journal-title {
+  font-size: 1.1em;
+  margin: 6px 0;
+  font-weight: bold;
+}
+
+#journal-input {
+  height: 60px;
+  max-height: 80px;
+  font-size: 1em;
+  padding: 0.6em;
+  border-radius: 6px;
+  border: 1px solid #aaa;
+  resize: vertical;
+  overflow-anchor: none;
+  scroll-margin-bottom: 300px;
+}
+
+/* Carousel & Rooms */
+#room-carousel {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+}
+
+#room-image {
+  width: 100%;
+  border-radius: 10px;
+  display: block;
+}
+
+#icon-layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.memory-icon {
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+  z-index: 10;
+}
+
+#carousel-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(20, 20, 20, 0.95);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 9999;
+}
+
+#carousel-image-container {
+  position: relative;
+  max-width: 90vw;
+  max-height: 80vh;
+  overflow: hidden;
+}
+
+#carousel-image {
+  width: 100%;
+  border-radius: 12px;
+  cursor: crosshair;
+}
+
+/* Memory Popup */
+.memory-popup {
+  position: absolute;
+  background: white;
+  padding: 10px 12px;
+  border-radius: 8px;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.4);
+  font-size: 0.9em;
+  max-width: 200px;
+  max-height: 150px;
+  overflow-y: auto;
+  z-index: 20;
+  cursor: pointer;
+}
+
+.popup-buttons {
+  display: flex;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.memory-action-btn {
+  font-size: 0.75em;
+  padding: 4px 8px;
+  background-color: #eee;
+  border: 1px solid #aaa;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.memory-action-btn:hover {
+  background-color: #ddd;
+}
+
+/* Help Button */
+#carousel-help-icon {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: white;
+  background: rgba(0, 0, 0, 0.4);
+  padding: 6px 10px;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  z-index: 15;
+}
+
+/* Modal */
+#carousel-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10000;
+}
+
+#carousel-modal-content {
+  background: white;
+  padding: 2em;
+  border-radius: 10px;
+  max-width: 90%;
+  text-align: center;
+}
+
+#carousel-modal-content button {
+  margin-top: 1em;
+  padding: 0.6em 1.2em;
+  background-color: #8c9eff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* Navigation Buttons */
+#room-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 1em 0;
+  gap: 1em;
+}
+
+#room-nav button {
+  font-size: 1.5em;
+  padding: 0.2em 0.6em;
+  background: #8c9eff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+#room-label {
+  color: white;
+  font-weight: bold;
+  font-size: 1em;
+}
+/* Hover edit/delete buttons for chat and journal */
+.entry-actions {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  display: none;
+  gap: 5px;
+}
+
+.chat-entry:hover .entry-actions,
+.journal-entry:hover .entry-actions {
+  display: flex;
+}
+
+.entry-actions button {
+  background: none;
+  border: none;
+  font-size: 14px;
+  cursor: pointer;
+  color: #888;
+  padding: 2px 4px;
+}
+
+.entry-actions button:hover {
+  color: #000;
+}
+.mood-invite {
+  margin-top: 10px;
+  font-size: 0.95em;
+  display: flex; 
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.prominent-home-btn {
+  background-color: #dcd6ff;
+  color: #333;
+  font-weight: 600;
+  padding: 6px 10px;
+  border-radius: 6px;
+  transition: background-color 0.2s ease;
+}
+
+.prominent-home-btn:hover {
+  background-color: #c8bfff;
+}
+#carousel-purpose {
+  color: white;
+  text-align: center;
+  margin: 1em 0;
+  max-width: 85vw;
+  font-size: 0.9em;
+  line-height: 1.4;
+}
+#carousel-purpose span {
+  font-weight: bold;
+}
+/* === Dropdown Flicker Fix === */
+select {
+  transition: none !important;
+  will-change: auto !important;
+  backface-visibility: hidden !important;
+  transform: translateZ(0) !important;
+}
+.status-content {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+#journal-input:focus {
+  scroll-margin-bottom: 200px;
+  html,body
+  overscroll-behavior-y: none;
+}
+  
+#journal-input-container {
+  max-height: 200px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+  scroll-margin-bottom: 300px;
+  padding-bottom: 80px; /* Leaves space when keyboard is open */
+}
+
+#app-container {
+  height: 100%;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  display: flex;
+  flex-direction: column;
+}

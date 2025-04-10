@@ -1,0 +1,297 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LeoBelle</title>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div id="app-container">
+  <header>
+    <h1>LeoBelle</h1>
+    <p>An app just for Leo and Isabelle</p>
+  </header>
+
+  <main>
+    <!-- Superhero Selector -->
+    <section id="superhero-select" class="row-inline">
+      <label style="margin-right: 10px; font-weight: bold;">Select your superhero:</label>
+      <div class="button-pair">
+        <button id="btn-leo">Leo</button>
+        <button id="btn-iz">Isabelle</button>
+      </div>
+    </section>
+
+    <!-- Synergy -->
+    <section id="synergy-section">
+      <h2>Synergy</h2>
+      <div id="synergy-bar-bg">
+        <div id="synergy-bar-fill"></div>
+      </div>
+    </section>
+
+    <!-- Fast Status -->
+    <section id="quick-status">
+      <h2>Fast Statuses</h2>
+
+      <!-- Row 1 -->
+      <div class="status-row">
+        <div class="status-tile">
+          <label for="leoCar">🚗 Leo’s Car</label>
+          <select id="leoCar" onchange="updateStatus('leoCar', this.value)">
+            <option value="">--</option>
+            <option value="✅">✅ Honda🥇</option>
+            <option value="❌">❌ Trash</option>
+          </select>
+          <p class="timestamp" id="leoCarTime"></p>
+        </div>
+        <div class="status-tile">
+          <label for="izHwk">📚 Iz’s Hwk</label>
+          <select id="izHwk" onchange="updateStatus('izHwk', this.value)">
+            <option value="">--</option>
+            <option value="🏆">🏆 Tchrs Pet</option>
+            <option value="😩">😩 Kill Me</option>
+          </select>
+          <p class="timestamp" id="izHwkTime"></p>
+        </div>
+      </div>
+
+      <!-- Row 2 -->
+      <div class="status-row">
+        <div class="status-tile">
+          <label for="goobie">🐈‍⬛ Goobie</label>
+          <select id="goobie" onchange="updateStatus('goobie', this.value)">
+            <option value="">--</option>
+            <option value="🧶">🧶 Playing</option>
+            <option value="⚡️">⚡️ Hyper AF</option>
+            <option value="💤">💤 Sleeping</option>
+            <option value="🍗">🍗 Stuffing face</option>
+            <option value="🛡️">🛡️ Protecting</option>
+          </select>
+          <p class="timestamp" id="goobieTime"></p>
+        </div>
+        <div class="status-tile">
+          <label for="izFreedom">🆓 Iz Freedom</label>
+          <select id="izFreedom" onchange="updateStatus('izFreedom', this.value)">
+            <option value="">--</option>
+            <option value="No work baby!">No work baby!</option>
+            <option value="50% day is mine">50% day is mine</option>
+            <option value="25% day is mine">25% day is mine</option>
+            <option value="10% day is mine">10% day is mine</option>
+            <option value="This day owns me">This day owns me</option>
+            <option value="I owe this day time">I owe this day time</option>
+          </select>
+          <p class="timestamp" id="izFreedomTime"></p>
+        </div>
+      </div>
+
+      <!-- Row 3 -->
+      <div class="status-row">
+        <div class="status-tile">
+          <label for="leoHappy">🌟 Leo Happy?</label>
+          <select id="leoHappy" onchange="updateStatus('leoHappy', this.value)">
+            <option value="">--</option>
+            <option value="☺️">☺️ Yes</option>
+            <option value="👌">👌 Sure</option>
+            <option value="🤷">🤷 Idk</option>
+            <option value="🛣️">🛣️ Trying</option>
+          </select>
+          <p class="timestamp" id="leoHappyTime"></p>
+        </div>
+        <div class="status-tile">
+          <label for="izHappy">🌟 Iz Happy?</label>
+          <select id="izHappy" onchange="updateStatus('izHappy', this.value)">
+            <option value="">--</option>
+            <option value="☺️">☺️ Yes</option>
+            <option value="👌">👌 Sure</option>
+            <option value="🤷‍♀️">🤷‍♀️ Idk</option>
+            <option value="🛣️">🛣️ Trying</option>
+          </select>
+          <p class="timestamp" id="izHappyTime"></p>
+        </div>
+      </div>
+
+      <!-- Row 4 -->
+      <div class="status-row">
+<div class="status-tile">
+  <label for="leoHeart">💙 Leo’s Heart</label>
+  <div class="status-content">
+    <select id="leoHeart" onchange="updateStatus('leoHeart', this.value)">
+      <option value="">--</option>
+      <option value="Full">Full</option>
+      <option value="Vulnerable">Vulnerable</option>
+      <option value="Open">Open</option>
+      <option value="Closed">Closed</option>
+    </select>
+    <p class="timestamp" id="leoHeartTime"></p>
+  </div>
+</div>
+        <div class="status-tile">
+          <label for="izHeart">💙 Iz’s Heart</label>
+          <select id="izHeart" onchange="updateStatus('izHeart', this.value)">
+            <option value="">--</option>
+            <option value="Full">Full</option>
+            <option value="Vulnerable">Vulnerable</option>
+            <option value="Open">Open</option>
+            <option value="Closed">Closed</option>
+          </select>
+          <p class="timestamp" id="izHeartTime"></p>
+        </div>
+      </div>
+
+      <!-- Row 5 -->
+      <p class="section-label">Self Expectations (Perfection):</p>
+      <div class="status-row">
+        <div class="status-tile">
+<label for="leoPerf">🦹 Leo Perf </label>
+          <select id="leoPerf" onchange="updateStatus('leoPerf', this.value)">
+            <option value="">--</option>
+            <option value="Pass">Pass</option>
+            <option value="Acceptable">Acceptable</option>
+            <option value="Fail">Fail</option>
+          </select>
+          <p class="timestamp" id="leoPerfTime"></p>
+        </div>
+        <div class="status-tile">
+          <label for="izPerf">🦹‍♀️ Iz Perf</label>
+          <select id="izPerf" onchange="updateStatus('izPerf', this.value)">
+            <option value="">--</option>
+            <option value="Pass">Pass</option>
+            <option value="Acceptable">Acceptable</option>
+            <option value="Fail">Fail</option>
+          </select>
+          <p class="timestamp" id="izPerfTime"></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Mood Tracker -->
+    <section id="mood">
+      <h2>Mood Tracker</h2>
+<p class="section-note">Select and submit your current mood. Respond to the other’s mood by clicking an option below.</p>
+      <div class="row-inline">
+        <select id="mood-select">
+          <option value="">Select Mood</option>
+          <option value="Happy">😊 Happy</option>
+          <option value="Content">🌿 Content</option>
+          <option value="Sad">😢 Sad</option>
+          <option value="Tired">🥱 Tired</option>
+          <option value="Anxious">😰 Anxious</option>
+          <option value="Confused">❓ Confused</option>
+          <option value="Lonely">💜 Lonely</option>
+          <option value="Cloud 9">☁️ Cloud 9</option>
+          <option value="Spontaneous">⚡ Spontaneous</option>
+          <option value="Goofy">🤪 Goofy</option>
+          <option value="Cautious">🧐 Cautious</option>
+          <option value="Empty">🕳️ Empty</option>
+          <option value="Dissociative">🚪 Dissociative</option>
+          <option value="Angry">🔥 Angry</option>
+          <option value="Excited">🎉 Excited</option>
+          <option value="Frustrated">😤 Frustrated</option>
+          <option value="Annoyed">😒 Annoyed</option>
+          <option value="Restless">🏃‍♂️ Restless</option>
+        </select>
+        <button class="action-btn" onclick="submitMood()">Submit Mood</button>
+      </div>
+
+      <div id="mood-display">
+        <h3>Leo's Mood:</h3>
+        <div id="leo-mood" class="mood-box"></div>
+        <div id="leo-response-note" class="response-note"></div>
+        <div class="row-inline">
+          <button class="mini-btn" onclick="viewMoodHistory('Leo')">View History</button>
+          <button class="mini-btn" onclick="resetMood('Leo')">Reset</button>
+        </div>
+
+        <h3>Isabelle's Mood:</h3>
+        <div id="isabelle-mood" class="mood-box"></div>
+        <div id="iz-response-note" class="response-note"></div>
+        <div class="row-inline">
+          <button class="mini-btn" onclick="viewMoodHistory('Isabelle')">View History</button>
+          <button class="mini-btn" onclick="resetMood('Isabelle')">Reset</button>
+        </div>
+      </div>
+    </section>
+
+    <div class="row-inline" style="margin: 1em 0;">
+      <button class="action-btn" onclick="openHome('Leo')">Leo’s Childhood Home</button>
+      <button class="action-btn" onclick="openHome('Isabelle')">Isabelle’s Childhood Home</button>
+    </div>
+      <!-- Chat -->
+      <section id="chat">
+       <h2>Anti-Text Message Chat</h2>
+<p class="section-note">Anxiety-free messaging for Isabelle.</p>
+        <div id="chat-feed"></div>
+        <input type="text" id="chat-input" placeholder="Type your message..." />
+        <div class="row-inline">
+          <button id="chat-send" class="action-btn">Send</button>
+          <button id="duck-send" class="action-btn">Deploy Derpy Duck</button>
+          <input type="file" id="chat-image" accept="image/*" style="display: none;" />
+          <button id="image-send" class="action-btn">Image</button>
+        </div>
+      </section>
+
+      <section id="journal">
+        <h2>Shared Journal</h2>
+        <p style="margin-top: -0.2em; font-style: italic; color: #555;">For our deeper thoughts</p>
+        <div id="journal-feed"></div>
+       <div id="journal-input-container">
+  <textarea id="journal-input" placeholder="Write something..."></textarea>
+  <button id="journal-send">Post</button>
+</div>
+      </section>
+
+      <button onclick="resetAllData()" class="mini-btn">Reset All Data</button>
+
+
+      <div id="carousel-container" style="display: none;">
+        <div id="carousel-image-container">
+          <img id="carousel-image" src="" alt="Room" />
+          <div id="carousel-help-icon" onclick="showHelpModal()">Directions</div>
+        </div>
+
+        <div id="carousel-purpose">
+          <p>
+            Welcome to <span id="home-name">Leo’s</span> childhood home.<br>
+            In response to each other’s moods, we can take the other home with us back in time to our childhood and
+            share a memory when we felt the same way. 
+  <br>
+            This helps us connect emotionally and understand each other more deeply. 
+          </p>
+        </div>
+
+        <div id="room-nav">
+          <button onclick="prevRoom()">⟵</button>
+          <span id="room-label">Room 1 of 4</span>
+          <button onclick="nextRoom()">⟶</button>
+        </div>
+        <button id="close-carousel" onclick="closeCarousel()">Save and Exit</button>
+      </div>
+    
+    <!-- Spacer to push real input higher -->
+<div style="height: 400px;"></div>
+
+<!-- Dummy text box to absorb keyboard behavior -->
+<section style="margin-top: -1em; margin-bottom: 2em; background: #eef9ee; border-radius: 10px; padding: 1em; border: 1px solid #ccc;">
+  <h3 style="margin-top: 0;">Dummy Box</h3>
+  <textarea style="width: 100%; font-size: 0.9em; height: 40px;" placeholder="Blank box. For dev purposes only."></textarea>
+</section>
+  </main>
+
+  <div id="carousel-modal" style="display: none;">
+    <div id="carousel-modal-content">
+      <div id="carousel-modal-text"></div>
+      <button onclick="nextModalStep()">Let’s Go</button>
+    </div>
+  </div>
+
+  <script src="script.js" defer></script>
+  </div> <!-- end of #app-container -->
+</body>
+
+</html>
